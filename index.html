@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>drama_tv_xtra</title>
+  <meta name="description" content="الصفحة الرسمية البسيطة لـ drama_tv_xtra — محتوى تيك توك ومعلومات التواصل.">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ff0054;--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, Arial, "Helvetica Neue", sans-serif;background:linear-gradient(180deg,#071126 0%, #061223 100%);color:#e6eef8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .container{width:100%;max-width:980px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(2,6,23,0.6);display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+    header h1{margin:0;font-size:28px;letter-spacing:0.4px}
+    p.lead{color:var(--muted);margin:12px 0 20px}
+    .actions{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#ff6a85);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cfd9e6}
+    .preview{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));padding:18px;border-radius:12px}
+    .profile{display:flex;gap:16px;align-items:center}
+    .avatar{width:82px;height:82px;border-radius:14px;background:linear-gradient(180deg,#111827,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:var(--accent)}
+    .meta{line-height:1}
+    .meta h2{margin:0 0 6px;font-size:20px}
+    .meta p{margin:0;color:var(--muted);font-size:14px}
+    .links{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+    .link{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.card{grid-template-columns:1fr;}
+      .preview{order:-1}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div>
+        <header>
+          <h1>drama_tv_xtra</h1>
+          <p class="lead">صفحة تعريف بسيطة لصالح drama_tv_xtra — مكان لعرض فيديوهات تيك توك، روابطك، ومعلومات التواصل.</p>
+        </header>
+
+        <div class="actions">
+          <a class="btn primary" href="https://www.tiktok.com/@brama_tv_xtra" target="_blank">زيارة حساب تيك توك</a>
+          <button class="btn ghost" id="copyUrl">نسخ رابط الصفحة</button>
+        </div>
+
+        <section style="margin-top:18px">
+          <h3 style="margin:0 0 8px">نبذة سريعة</h3>
+          <p style="margin:0;color:var(--muted)">مرحبًا! هذه صفحة جاهزة يمكنك تعديلها لتضمّن فيديوهات، صور، أو روابط إلى شبكاتك الاجتماعية. استبدل النصوص والروابط بالمحتوى الخاص بك.</p>
+        </section>
+
+        <footer>
+          تم إنشاؤها بـ ❤️ — drama_tv_xtra
+        </footer>
+      </div>
+
+      <aside class="preview">
+        <div class="profile">
+          <div class="avatar">DX</div>
+          <div class="meta">
+            <h2>drama_tv_xtra</h2>
+            <p class="muted">@brama_tv_xtra — حساب تيك توك</p>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="link" href="https://www.tiktok.com/@brama_tv_xtra" target="_blank">• أحدث فيديو</a>
+          <a class="link" href="#">• اتصل بي</a>
+          <a class="link" href="#">• تابعني على منصات أخرى</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('copyUrl').addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(location.href);
+        alert('تم نسخ رابط الصفحة إلى الحافظة');
+      }catch(e){
+        prompt('انسخ هذا الرابط يدوياً:', location.href);
+      }
+    });
+  </script>
+</body>
+</html>
